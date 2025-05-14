@@ -64,25 +64,26 @@ python main.py --config config/config.yaml
 
 ## Datasets
 
-The model uses two main datasets:
+Our model utilizes two datasets:
 
 1. **[Draft Data](https://github.com/paper0205/GARENRec/tree/main/dataset)**  
-    Champion pick/ban sequences and position information, collected from the League of Legends [Fandom Wiki](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki).  
-   To align with match-level performance data, we manually created and standardized the `gameid` field to enable merging with the match data.
+   This dataset includes champion pick/ban sequences and positional information, collected from the League of Legends [Fandom Wiki](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki).  
+   To enable integration with match-level statistics, we manually created and standardized the `gameid` field.
 
 2. **[Match Data](https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH)**  
-   Player and team performance statistics sourced from [Oracle’s Elixir](https://oracleselixir.com/), a public repository for professional League of Legends data.
+   This dataset contains player and team performance metrics, sourced from [Oracle’s Elixir](https://oracleselixir.com/), a public repository for professional League of Legends statistics.
 
-**Required columns in Draft Data:**
-- `gameid`: Unique identifier for each match
+### Draft Data Schema
+- `gameid`: Unique identifier (manually created for matching)
 - `BB1–BB5`, `RB1–RB5`: Blue and Red team bans
 - `BP1–BP5`, `RP1–RP5`: Blue and Red team picks
-- `BR1–BR5`, `RR1–RR5`: Blue and Red team roles/positions
+- `BR1–BR5`, `RR1–RR5`: Role assignments for picked champions
 - `Winner`: 1 if Blue team won, 2 if Red team won
 
-**Required columns in Match Data:**
-- `gameid`: Unique identifier for each match 
-- Performance metrics (kills, deaths, assists, etc.)
+### Match Data Schema
+- `gameid`: Unique identifier for each match
+- Performance metrics: kills, deaths, assists, gold, etc.
+
 
 ## Disclaimer
 
