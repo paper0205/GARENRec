@@ -65,20 +65,20 @@ python main.py --config config/config.yaml
 ## Datasets
 
 The model uses two main datasets:
-1. **Draft Data**: Champion picks and bans with positions
-2. **Match Data**: Player performance metrics
 
-Required columns in draft data:
-- `gameid`: Unique identifier for each match
-- `BB1-BB5`, `RB1-RB5`: Blue and Red team bans
-- `BP1-BP5`, `RP1-RP5`: Blue and Red team picks
-- `BR1-BR5`, `RR1-RR5`: Blue and Red team roles/positions
-- `Winner`: 1 if Blue team won, 0 if Red team won
+1. **[Draft Data](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki)**: Champion picks and bans with positions  
+2. **[Match Data](https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH)**: Player performance metrics
 
-Required columns in match data:
+**Required columns in Draft Data:**
 - `gameid`: Unique identifier for each match
+- `BB1–BB5`, `RB1–RB5`: Blue and Red team bans
+- `BP1–BP5`, `RP1–RP5`: Blue and Red team picks
+- `BR1–BR5`, `RR1–RR5`: Blue and Red team roles/positions
+- `Winner`: 1 if Blue team won, 2 if Red team won
+
+**Required columns in Match Data:**
+- `gameid`: Unique identifier for each match 
 - Performance metrics (kills, deaths, assists, etc.)
-- `side`: Team side (Blue/Red)
 
 ## Disclaimer
 
