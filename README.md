@@ -66,8 +66,12 @@ python main.py --config config/config.yaml
 
 The model uses two main datasets:
 
-1. **[Draft Data](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki)**: Champion picks and bans with positions  
-2. **[Match Data](https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH)**: Player performance metrics
+1. **[Draft Data](https://github.com/paper0205/GARENRec/tree/main/dataset)**  
+    Champion pick/ban sequences and position information, collected from the League of Legends [Fandom Wiki](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki).  
+   To align with match-level performance data, we manually created and standardized the `gameid` field to enable merging with the match data.
+
+2. **[Match Data](https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH)**  
+   Player and team performance statistics sourced from [Oracle’s Elixir](https://oracleselixir.com/), a public repository for professional League of Legends data.
 
 **Required columns in Draft Data:**
 - `gameid`: Unique identifier for each match
