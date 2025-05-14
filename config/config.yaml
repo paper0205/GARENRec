@@ -1,0 +1,31 @@
+# 기본 설정 파일
+data:
+  draft_data_path: "./data/BANPICK_2020.csv"
+  match_data_path: "./data/Match_data_2023.csv" # Refer to oracleselixir : https://drive.google.com/drive/u/0/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH
+  train_ratio: 0.85
+  val_ratio: 0.05
+  test_ratio: 0.10
+  random_seed: 42
+
+model:
+  name: "GARENRec"
+  embedding_dim: 128
+  gnn_hidden_dim: 64
+  nhead: 4
+  dropout: 0.2
+  num_layers: 2
+  feature_dim: 18
+
+training:
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  max_epochs: 50
+  patience: 5
+  gradient_clip: 5.0
+  warmup_ratio: 0.1
+  scheduler: "cosine"  # "cosine" or "step"
+
+paths:
+  model_save_path: "./checkpoints"
+  log_dir: "./logs"
