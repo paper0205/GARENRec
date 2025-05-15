@@ -17,12 +17,12 @@ GARENRec/
 │   ├── dataset.py          # Dataset classes and data processing
 │   └── match_data_processor.py # Match data preprocessing
 ├── models/
-│   ├── garen_rec.py        # Main GARENRec model
+│   ├── garenrec.py        # Main GARENRec model
 │   └── layers.py           # Model layers (GraphEmbedding, Loss, etc.)
 ├── utils/
 │   ├── metrics.py          # Evaluation metrics (HR@k, NDCG@k) and loss functions
 │   └── utils.py            # Utility functions (data loading, model saving, etc.)
-├── run_hyper.py            # Hyperparameter tuning script
+├── run_hyper.py            # (not included in current version) optuna based Hyperparameter tuning script
 ├── main.py                 # Main execution script
 └── requirements.txt        # Dependencies
 ```
