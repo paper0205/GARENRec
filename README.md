@@ -4,7 +4,7 @@ We present GARENRec, a graph-enhanced Transformer model designed to support stra
 
 Overall architecture of GARENRec. The architecture consists of (a) an input processing section with various features, (b) Graph Embedding Layer for processing relationship information, (c) Feature Embedding Layer that handles feature representation, and (d) a Transformer Encoder Block that generates the final Champion Output. The model applies masking to respect already selected champions, ensuring adherence to game rules.
 
-<p align="center"><img src="assets/Architecture.png" width="80%" height="80%"></p>
+<p align="center"><img src="assets/Architecture.png"></p>
 
 ## Project Structure
 
@@ -26,26 +26,6 @@ GARENRec/
 ├── main.py                 # Main execution script
 └── requirements.txt        # Dependencies
 ```
-
-## Requirements
-
-```
-torch==2.1.0
-torchvision
-pandas
-tqdm
-optuna
-torch-scatter
-torch-sparse
-torch-cluster
-torch-spline-conv
-torch-geometric
-numpy
-pyyaml
-scikit-learn
-matplotlib
-```
-
 ## Installation
 
 Install dependencies:
